@@ -105,7 +105,7 @@ export const lightTokens = {
 } as const;
 
 // ─── Semantic Tokens (Dark) ──────────────────────────────────
-export const darkTokens: typeof lightTokens = {
+export const darkTokens: SemanticTokens = {
   colorBackground: primitives.gray900,
   colorSurface: primitives.gray800,
   colorText: primitives.gray100,
@@ -131,5 +131,5 @@ export const darkTokens: typeof lightTokens = {
   shadow: '0 4px 6px -1px rgba(0,0,0,0.3)',
 };
 
-export type SemanticTokens = typeof lightTokens;
+export type SemanticTokens = { [K in keyof typeof lightTokens]: string };
 export type ThemeMode = 'light' | 'dark';

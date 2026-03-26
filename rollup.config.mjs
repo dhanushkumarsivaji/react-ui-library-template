@@ -62,6 +62,10 @@ const config = {
       }),
   ].filter(Boolean),
   external: ['react', 'react-dom', 'react/jsx-runtime'],
+  onwarn(warning, warn) {
+    if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
+    warn(warning);
+  },
 };
 
 export default config;

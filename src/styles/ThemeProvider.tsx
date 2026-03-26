@@ -1,4 +1,12 @@
-import { createContext, useContext, useMemo, useState, useCallback, useEffect, ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useMemo,
+  useState,
+  useCallback,
+  useEffect,
+  ReactNode,
+} from 'react';
 import { ThemeProvider as MuiThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { lightTokens, darkTokens, type ThemeMode, type SemanticTokens } from './tokens';
 
@@ -42,7 +50,10 @@ interface ThemeProviderProps {
 const ThemeProvider = ({ defaultMode, children }: ThemeProviderProps) => {
   const [mode, setMode] = useState<ThemeMode>(() => {
     if (defaultMode) return defaultMode;
-    if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
       return 'dark';
     }
     return 'light';

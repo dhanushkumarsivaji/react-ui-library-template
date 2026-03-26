@@ -19,6 +19,8 @@ export default [
       '*.setup.js',
       'babel.config.js',
       'commitlint.config.js',
+      'src/__mocks__/**',
+      '**/__snapshots__/**',
     ],
   },
 

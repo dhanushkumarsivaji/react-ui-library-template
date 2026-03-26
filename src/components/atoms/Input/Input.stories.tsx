@@ -37,5 +37,11 @@ export const Small: Story = {
 
 export const FullWidth: Story = {
   args: { label: 'Full Width Input', fullWidth: true },
-  decorators: [(Story) => <div style={{ width: 400 }}><Story /></div>],
+  decorators: [
+    (Story) => (
+      <div style={{ width: 400 }}>
+        <Story />
+      </div>
+    ),
+  ],
 };

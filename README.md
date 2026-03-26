@@ -33,28 +33,28 @@ Starting a component library from scratch means wiring up **30+ tools** before w
 
 ### What Makes This Different
 
-| Feature | This Template | Typical Starters |
-|---|:---:|:---:|
-| React 19 + TypeScript 5.9 | Yes | Often 18 + TS 4 |
-| Mixed JS/TS components | Yes | TS only |
-| ESLint 10 flat config | Yes | ESLint 8 legacy |
-| Storybook 10 with a11y addon | Yes | Storybook 7-8 |
-| Jest 30 + jest-axe a11y tests | Yes | No a11y tests |
-| Snapshot testing | Yes | Rarely |
-| Design tokens + dark mode + ThemeProvider | Yes | No |
-| Changesets (not deprecated standard-version) | Yes | standard-version |
-| Bundle analysis (visualizer) | Yes | No |
-| Size-limit checks | Yes | No |
-| Tree-shakeable output (preserveModules) | Yes | Single bundle |
-| Auto `.d.ts` type generation | Yes | Manual |
-| npm provenance (supply chain security) | Yes | No |
-| CodeQL security scanning | Yes | No |
-| Dependabot with grouped updates | Yes | No |
-| GitHub issue/PR templates (YAML forms) | Yes | No |
-| SECURITY.md + CODE_OF_CONDUCT.md | Yes | Rarely |
-| 80% coverage thresholds | Yes | No thresholds |
-| AI governance (CLAUDE.md, Copilot, Cursor) | Yes | No |
-| Component generator script | Yes | No |
+| Feature                                      | This Template | Typical Starters |
+| -------------------------------------------- | :-----------: | :--------------: |
+| React 19 + TypeScript 5.9                    |      Yes      | Often 18 + TS 4  |
+| Mixed JS/TS components                       |      Yes      |     TS only      |
+| ESLint 10 flat config                        |      Yes      | ESLint 8 legacy  |
+| Storybook 10 with a11y addon                 |      Yes      |  Storybook 7-8   |
+| Jest 30 + jest-axe a11y tests                |      Yes      |  No a11y tests   |
+| Snapshot testing                             |      Yes      |      Rarely      |
+| Design tokens + dark mode + ThemeProvider    |      Yes      |        No        |
+| Changesets (not deprecated standard-version) |      Yes      | standard-version |
+| Bundle analysis (visualizer)                 |      Yes      |        No        |
+| Size-limit checks                            |      Yes      |        No        |
+| Tree-shakeable output (preserveModules)      |      Yes      |  Single bundle   |
+| Auto `.d.ts` type generation                 |      Yes      |      Manual      |
+| npm provenance (supply chain security)       |      Yes      |        No        |
+| CodeQL security scanning                     |      Yes      |        No        |
+| Dependabot with grouped updates              |      Yes      |        No        |
+| GitHub issue/PR templates (YAML forms)       |      Yes      |        No        |
+| SECURITY.md + CODE_OF_CONDUCT.md             |      Yes      |      Rarely      |
+| 80% coverage thresholds                      |      Yes      |  No thresholds   |
+| AI governance (CLAUDE.md, Copilot, Cursor)   |      Yes      |        No        |
+| Component generator script                   |      Yes      |        No        |
 
 ---
 
@@ -101,22 +101,22 @@ npm start                  # Storybook on http://localhost:6006
 
 ### Available Scripts
 
-| Command | Description |
-|---|---|
-| `npm start` | Storybook dev server (port 6006) |
-| `npm run build` | Build library (CJS + ESM + `.d.ts` types) |
-| `npm test` | Run all 83 tests with coverage |
-| `npm run test:watch` | Tests in watch mode |
-| `npm run lint` | Lint & auto-fix (ESLint 10 flat config) |
-| `npm run typecheck` | TypeScript strict type checking |
-| `npm run validate` | Full CI check (lint + types + test + build) |
-| `npm run analyze` | Open bundle visualizer (stats.html) |
-| `npm run size` | Check bundle size limits |
-| `npm run generate -- atoms MyButton` | Scaffold a new component with tests |
-| `npm run commit` | Interactive conventional commit prompt |
-| `npx changeset` | Add a changeset for release |
-| `npm run release` | Bump versions from changesets |
-| `npm run build-storybook` | Build static Storybook site |
+| Command                              | Description                                 |
+| ------------------------------------ | ------------------------------------------- |
+| `npm start`                          | Storybook dev server (port 6006)            |
+| `npm run build`                      | Build library (CJS + ESM + `.d.ts` types)   |
+| `npm test`                           | Run all 83 tests with coverage              |
+| `npm run test:watch`                 | Tests in watch mode                         |
+| `npm run lint`                       | Lint & auto-fix (ESLint 10 flat config)     |
+| `npm run typecheck`                  | TypeScript strict type checking             |
+| `npm run validate`                   | Full CI check (lint + types + test + build) |
+| `npm run analyze`                    | Open bundle visualizer (stats.html)         |
+| `npm run size`                       | Check bundle size limits                    |
+| `npm run generate -- atoms MyButton` | Scaffold a new component with tests         |
+| `npm run commit`                     | Interactive conventional commit prompt      |
+| `npx changeset`                      | Add a changeset for release                 |
+| `npm run release`                    | Bump versions from changesets               |
+| `npm run build-storybook`            | Build static Storybook site                 |
 
 ---
 
@@ -196,25 +196,25 @@ Each component gets its own file in the output — bundlers eliminate unused cod
 
 ## Example Components
 
-| Component | Type | Language | Features Demonstrated |
-|---|---|---|---|
-| **Button** | Atom | JavaScript | PropTypes, loading spinner, variants, disabled state |
-| **Input** | Atom | TypeScript | `forwardRef`, MUI TextField, adornments, form library ready |
-| **ThemeToggle** | Atom | TypeScript | Dark mode toggle, `useThemeMode` hook, system preference |
-| **Card** | Molecule | TypeScript | Composition (header/media/content/actions), conditional rendering |
-| **Alert** | Molecule | TypeScript | Dismiss animation (Collapse), severity variants, custom actions |
-| **Modal** | Organism | TypeScript | Portal rendering, focus trap, backdrop/escape handling, ARIA |
+| Component       | Type     | Language   | Features Demonstrated                                             |
+| --------------- | -------- | ---------- | ----------------------------------------------------------------- |
+| **Button**      | Atom     | JavaScript | PropTypes, loading spinner, variants, disabled state              |
+| **Input**       | Atom     | TypeScript | `forwardRef`, MUI TextField, adornments, form library ready       |
+| **ThemeToggle** | Atom     | TypeScript | Dark mode toggle, `useThemeMode` hook, system preference          |
+| **Card**        | Molecule | TypeScript | Composition (header/media/content/actions), conditional rendering |
+| **Alert**       | Molecule | TypeScript | Dismiss animation (Collapse), severity variants, custom actions   |
+| **Modal**       | Organism | TypeScript | Portal rendering, focus trap, backdrop/escape handling, ARIA      |
 
-| Export | Type | Description |
-|---|---|---|
-| **ThemeProvider** | Context | Light/dark mode, CSS variables, MUI theme sync |
-| **useThemeMode** | Hook | Access `mode`, `toggleMode`, `setMode`, `tokens` |
-| **useToggle** | Hook | Boolean toggle with direct setter |
-| **useMediaQuery** | Hook | Reactive CSS media queries, SSR-safe |
-| **cn** | Utility | Class name concatenation with falsy filtering |
-| **formatDate** | Utility | `Intl.DateTimeFormat` with locale support |
-| **primitives** | Tokens | Raw design values (colors, spacing, radii, shadows) |
-| **lightTokens** / **darkTokens** | Tokens | Semantic token sets for each theme mode |
+| Export                           | Type    | Description                                         |
+| -------------------------------- | ------- | --------------------------------------------------- |
+| **ThemeProvider**                | Context | Light/dark mode, CSS variables, MUI theme sync      |
+| **useThemeMode**                 | Hook    | Access `mode`, `toggleMode`, `setMode`, `tokens`    |
+| **useToggle**                    | Hook    | Boolean toggle with direct setter                   |
+| **useMediaQuery**                | Hook    | Reactive CSS media queries, SSR-safe                |
+| **cn**                           | Utility | Class name concatenation with falsy filtering       |
+| **formatDate**                   | Utility | `Intl.DateTimeFormat` with locale support           |
+| **primitives**                   | Tokens  | Raw design values (colors, spacing, radii, shadows) |
+| **lightTokens** / **darkTokens** | Tokens  | Semantic token sets for each theme mode             |
 
 ---
 
@@ -239,7 +239,7 @@ import { ThemeProvider, ThemeToggle, useThemeMode } from 'your-library';
 
 const App = () => (
   <ThemeProvider defaultMode="light">
-    <ThemeToggle />   {/* Toggle button */}
+    <ThemeToggle /> {/* Toggle button */}
     <YourContent />
   </ThemeProvider>
 );
@@ -252,6 +252,7 @@ const MyComponent = () => {
 ```
 
 Features:
+
 - Respects `prefers-color-scheme` system preference by default
 - CSS variables injected on `<html>` — works with any styling approach
 - `data-theme="light|dark"` attribute on `<html>` for CSS selectors
@@ -277,12 +278,15 @@ export const lightTokens = {
 Every component ships with **three types of tests** (83 tests total):
 
 ### 1. Unit Tests
+
 Core functionality — props, events, conditional rendering, edge cases.
 
 ### 2. Snapshot Tests
+
 Detect unintended markup changes between commits.
 
 ### 3. Accessibility Tests (jest-axe)
+
 WCAG 2.1 compliance checked automatically on every component:
 
 ```tsx
@@ -293,6 +297,7 @@ test('has no a11y violations', async () => {
 ```
 
 ### Coverage Thresholds
+
 The project enforces **80% minimum** on branches, functions, lines, and statements. Tests fail if coverage drops below.
 
 ---
@@ -317,6 +322,7 @@ git push
 ### Automated Release (CI)
 
 When changesets are merged to `main`, the GitHub Action:
+
 1. Creates a **"Version Packages"** PR aggregating all changesets
 2. Merging that PR triggers: version bump + CHANGELOG + **npm publish with provenance**
 
@@ -339,14 +345,15 @@ This template is **AI-ready out of the box** — pre-configured for the three ma
 
 ### Pre-Configured AI Tools
 
-| File | Tool | What It Does |
-|---|---|---|
-| `CLAUDE.md` | Claude Code | Full project context — architecture, rules, commands, do's/don'ts |
-| `.github/copilot-instructions.md` | GitHub Copilot | Code generation rules, testing patterns, style guide |
-| `.cursorrules` | Cursor | Compact AI instructions for editor-level assistance |
-| `AI_GOVERNANCE.md` | All tools | Governance policy for responsible AI-assisted development |
+| File                              | Tool           | What It Does                                                      |
+| --------------------------------- | -------------- | ----------------------------------------------------------------- |
+| `CLAUDE.md`                       | Claude Code    | Full project context — architecture, rules, commands, do's/don'ts |
+| `.github/copilot-instructions.md` | GitHub Copilot | Code generation rules, testing patterns, style guide              |
+| `.cursorrules`                    | Cursor         | Compact AI instructions for editor-level assistance               |
+| `AI_GOVERNANCE.md`                | All tools      | Governance policy for responsible AI-assisted development         |
 
 When you open this project in Claude Code, Cursor, or Copilot, the AI automatically knows:
+
 - The atomic design pattern (atoms/molecules/organisms)
 - That every component needs unit + snapshot + accessibility tests
 - To use MUI as the component foundation
@@ -405,29 +412,29 @@ After cloning, update these files:
 
 ## Tech Stack
 
-| Category | Tool | Version |
-|---|---|---|
-| UI Framework | React | 19.2 |
-| Language | TypeScript | 5.9 |
-| Bundler | Rollup | 4.60 |
-| Transpiler | Babel | 7.29 |
-| Component Foundation | MUI (Material UI) | 7 |
-| Theming | Design tokens + CSS variables | Custom |
-| Documentation | Storybook | 10 |
-| Test Runner | Jest | 30 |
-| Test Utils | React Testing Library | 16 |
-| Accessibility Testing | jest-axe | 10 |
-| Linter | ESLint (flat config) | 10 |
-| Formatter | Prettier | 3.8 |
-| Git Hooks | Husky + lint-staged | 9 + 16 |
-| Commit Linting | commitlint | 20 |
-| Release Management | Changesets | 2.30 |
-| Bundle Analysis | rollup-plugin-visualizer | 7 |
-| Size Checking | size-limit | 12 |
-| Security Scanning | CodeQL + Dependabot | - |
-| Supply Chain | npm provenance (Sigstore) | - |
-| CI/CD | GitHub Actions (4 workflows) | - |
-| AI Config | CLAUDE.md + Copilot + Cursor | - |
+| Category              | Tool                          | Version |
+| --------------------- | ----------------------------- | ------- |
+| UI Framework          | React                         | 19.2    |
+| Language              | TypeScript                    | 5.9     |
+| Bundler               | Rollup                        | 4.60    |
+| Transpiler            | Babel                         | 7.29    |
+| Component Foundation  | MUI (Material UI)             | 7       |
+| Theming               | Design tokens + CSS variables | Custom  |
+| Documentation         | Storybook                     | 10      |
+| Test Runner           | Jest                          | 30      |
+| Test Utils            | React Testing Library         | 16      |
+| Accessibility Testing | jest-axe                      | 10      |
+| Linter                | ESLint (flat config)          | 10      |
+| Formatter             | Prettier                      | 3.8     |
+| Git Hooks             | Husky + lint-staged           | 9 + 16  |
+| Commit Linting        | commitlint                    | 20      |
+| Release Management    | Changesets                    | 2.30    |
+| Bundle Analysis       | rollup-plugin-visualizer      | 7       |
+| Size Checking         | size-limit                    | 12      |
+| Security Scanning     | CodeQL + Dependabot           | -       |
+| Supply Chain          | npm provenance (Sigstore)     | -       |
+| CI/CD                 | GitHub Actions (4 workflows)  | -       |
+| AI Config             | CLAUDE.md + Copilot + Cursor  | -       |
 
 ---
 

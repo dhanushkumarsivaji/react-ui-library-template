@@ -9,24 +9,24 @@ updates:
     groups:
       storybook:
         patterns:
-          - "@storybook/*"
-          - "storybook"
+          - '@storybook/*'
+          - 'storybook'
       testing:
         patterns:
-          - "@testing-library/*"
-          - "jest*"
+          - '@testing-library/*'
+          - 'jest*'
       rollup:
         patterns:
-          - "@rollup/*"
-          - "rollup*"
+          - '@rollup/*'
+          - 'rollup*'
       eslint:
         patterns:
-          - "eslint*"
-          - "@eslint/*"
-          - "typescript-eslint"
+          - 'eslint*'
+          - '@eslint/*'
+          - 'typescript-eslint'
       babel:
         patterns:
-          - "@babel/*"
+          - '@babel/*'
     labels:
       - dependencies
     reviewers:

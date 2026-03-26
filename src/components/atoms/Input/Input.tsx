@@ -2,8 +2,7 @@ import { forwardRef, InputHTMLAttributes } from 'react';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'color'> {
+export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'color'> {
   /** Input label */
   label?: string;
   /** Helper text below the input */

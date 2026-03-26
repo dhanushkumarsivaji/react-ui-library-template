@@ -26,7 +26,11 @@ describe('Alert', () => {
 
   test('calls onDismiss when dismissed', async () => {
     const onDismiss = jest.fn();
-    render(<Alert dismissible onDismiss={onDismiss}>Message</Alert>);
+    render(
+      <Alert dismissible onDismiss={onDismiss}>
+        Message
+      </Alert>,
+    );
     await userEvent.click(screen.getByLabelText('Dismiss alert'));
     expect(onDismiss).toHaveBeenCalledTimes(1);
   });
@@ -43,13 +47,19 @@ describe('Alert', () => {
 
   // Snapshot
   test('matches snapshot — info alert', () => {
-    const { container } = render(<Alert severity="info" title="Info">Info message</Alert>);
+    const { container } = render(
+      <Alert severity="info" title="Info">
+        Info message
+      </Alert>,
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('matches snapshot — dismissible error', () => {
     const { container } = render(
-      <Alert severity="error" dismissible>Error message</Alert>,
+      <Alert severity="error" dismissible>
+        Error message
+      </Alert>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -42,13 +42,13 @@ AI-generated code must meet the **exact same standards** as human-written code:
 
 ## Approved AI Tools
 
-| Tool | Status | Notes |
-|---|---|---|
-| GitHub Copilot | Approved | Configured via `.github/copilot-instructions.md` |
-| Claude Code | Approved | Configured via `CLAUDE.md` |
-| Cursor | Approved | Configured via `.cursorrules` |
-| ChatGPT / Claude Web | Approved with caution | Don't paste proprietary code |
-| Unvetted AI tools | Requires approval | Check with maintainers first |
+| Tool                 | Status                | Notes                                            |
+| -------------------- | --------------------- | ------------------------------------------------ |
+| GitHub Copilot       | Approved              | Configured via `.github/copilot-instructions.md` |
+| Claude Code          | Approved              | Configured via `CLAUDE.md`                       |
+| Cursor               | Approved              | Configured via `.cursorrules`                    |
+| ChatGPT / Claude Web | Approved with caution | Don't paste proprietary code                     |
+| Unvetted AI tools    | Requires approval     | Check with maintainers first                     |
 
 ---
 
@@ -105,16 +105,16 @@ When reviewing PRs that used AI assistance:
 
 The following automated checks enforce quality regardless of code origin:
 
-| Check | Enforced By | Blocks Merge? |
-|---|---|---|
-| Linting (ESLint 10) | CI workflow + pre-commit hook | Yes |
-| Type checking (TypeScript strict) | CI workflow | Yes |
-| Tests (80% coverage threshold) | CI workflow | Yes |
-| Accessibility (jest-axe) | Test suite | Yes |
-| Security (CodeQL) | CodeQL workflow | Yes (on main) |
-| Dependency updates | Dependabot | Creates PRs |
-| Commit messages | commitlint + commit-msg hook | Yes |
-| Bundle size | size-limit | Warning |
+| Check                             | Enforced By                   | Blocks Merge? |
+| --------------------------------- | ----------------------------- | ------------- |
+| Linting (ESLint 10)               | CI workflow + pre-commit hook | Yes           |
+| Type checking (TypeScript strict) | CI workflow                   | Yes           |
+| Tests (80% coverage threshold)    | CI workflow                   | Yes           |
+| Accessibility (jest-axe)          | Test suite                    | Yes           |
+| Security (CodeQL)                 | CodeQL workflow               | Yes (on main) |
+| Dependency updates                | Dependabot                    | Creates PRs   |
+| Commit messages                   | commitlint + commit-msg hook  | Yes           |
+| Bundle size                       | size-limit                    | Warning       |
 
 ---
 

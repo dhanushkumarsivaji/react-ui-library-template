@@ -34,39 +34,48 @@ npm run commit         # Interactive conventional commit
 ## Architecture Rules
 
 ### Component Pattern (MUST follow)
+
 Every component lives in `src/components/{atoms|molecules|organisms}/ComponentName/` with:
+
 - `ComponentName.tsx` (or `.jsx`) — implementation
 - `ComponentName.stories.tsx` — Storybook stories with `tags: ['autodocs']`
 - `__tests__/ComponentName.test.tsx` — unit + snapshot + accessibility tests
 - `index.ts` — barrel export
 
 ### Exports
+
 All public components MUST be exported from `src/index.ts`. Use named exports for types, default exports for components.
 
 ### Testing Requirements (MUST follow)
+
 Every component test file MUST include all three test types:
+
 1. **Unit tests** — props, events, conditional rendering
 2. **Snapshot tests** — `expect(container.firstChild).toMatchSnapshot()`
 3. **Accessibility tests** — `expect(await axe(container)).toHaveNoViolations()`
 
 ### Styling
+
 - Use MUI components as the foundation
 - Use Emotion (`@emotion/styled`) for custom styles
 - Support both controlled and uncontrolled patterns
 - All components must accept a `className` prop
 
 ### TypeScript
+
 - Strict mode enabled — no `any` unless unavoidable (use `unknown` instead)
 - Export interfaces for all component props (e.g., `export interface ButtonProps`)
 - Use `forwardRef` for components that wrap native elements
 
 ### Accessibility (MUST follow)
+
 - All interactive components need proper ARIA attributes
 - Use semantic HTML elements
 - Support keyboard navigation
 - Test with jest-axe in every test file
 
 ### Commits
+
 Use conventional commits: `feat:`, `fix:`, `docs:`, `test:`, `refactor:`, `chore:`
 
 ## File Structure

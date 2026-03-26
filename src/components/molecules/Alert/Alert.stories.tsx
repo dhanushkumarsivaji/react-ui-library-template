@@ -10,7 +10,13 @@ const meta: Meta<typeof Alert> = {
     severity: { control: 'select', options: ['success', 'info', 'warning', 'error'] },
     variant: { control: 'select', options: ['filled', 'outlined', 'standard'] },
   },
-  decorators: [(Story) => <div style={{ width: 500 }}><Story /></div>],
+  decorators: [
+    (Story) => (
+      <div style={{ width: 500 }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default meta;
@@ -48,6 +54,10 @@ export const WithAction: Story = {
   args: {
     severity: 'warning',
     children: 'Your session is about to expire.',
-    action: <MuiButton color="inherit" size="small">Extend</MuiButton>,
+    action: (
+      <MuiButton color="inherit" size="small">
+        Extend
+      </MuiButton>
+    ),
   },
 };

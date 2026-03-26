@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import MuiButton from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Modal from './Modal';
+import Modal, { type ModalProps } from './Modal';
 
 const meta: Meta<typeof Modal> = {
   title: 'Organisms/Modal',
@@ -16,7 +16,7 @@ const meta: Meta<typeof Modal> = {
 export default meta;
 type Story = StoryObj<typeof Modal>;
 
-const ModalWrapper = (args: any) => {
+const ModalWrapper = (args: ModalProps) => {
   const [open, setOpen] = useState(false);
   return (
     <>

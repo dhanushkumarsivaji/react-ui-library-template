@@ -1,7 +1,7 @@
 name: Bug Report
 description: Report a bug in the component library
-title: "[Bug]: "
-labels: ["bug", "triage"]
+title: '[Bug]: '
+labels: ['bug', 'triage']
 body:
   - type: markdown
     attributes:
@@ -40,7 +40,7 @@ body:
     id: version
     attributes:
       label: Library version
-      placeholder: "1.0.0"
+      placeholder: '1.0.0'
     validations:
       required: true
 

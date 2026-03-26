@@ -6,6 +6,7 @@ const config = {
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
     '@storybook/addon-links',
+    '@chromatic-com/storybook',
   ],
   framework: {
     name: '@storybook/react-webpack5',

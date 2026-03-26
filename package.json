@@ -107,7 +107,9 @@
     "prepare": "husky",
     "prepublishOnly": "npm run build",
     "size": "size-limit",
-    "generate": "bash scripts/generate-component.sh"
+    "generate": "bash scripts/generate-component.sh",
+    "test:storybook": "test-storybook --url http://localhost:6006",
+    "test:storybook:ci": "test-storybook --url http://localhost:6006 --ci"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
@@ -124,6 +126,7 @@
     "@babel/preset-typescript": "^7.28.5",
     "@changesets/changelog-github": "^0.6.0",
     "@changesets/cli": "^2.30.0",
+    "@chromatic-com/storybook": "^5.1.0",
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
     "@emotion/react": "^11.14.0",
@@ -138,16 +141,19 @@
     "@rollup/plugin-terser": "^1.0.0",
     "@size-limit/preset-small-lib": "^12.0.1",
     "@storybook/addon-a11y": "^10.3.3",
+    "@storybook/addon-docs": "^10.3.3",
     "@storybook/addon-links": "^10.3.3",
     "@storybook/addon-webpack5-compiler-babel": "^4.0.1",
     "@storybook/react": "^10.3.3",
     "@storybook/react-webpack5": "^10.3.3",
+    "@storybook/test-runner": "^0.24.3",
     "@testing-library/dom": "^10.0.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "axe-playwright": "^2.2.2",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^10.1.0",
@@ -197,8 +203,5 @@
       "path": "dist/esm/index.js",
       "limit": "50 kB"
     }
-  ],
-  "dependencies": {
-    "@storybook/addon-docs": "^10.3.3"
-  }
+  ]
 }

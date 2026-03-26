@@ -61,7 +61,7 @@ const config = {
         brotliSize: true,
       }),
   ].filter(Boolean),
-  external: ['react', 'react-dom', 'react/jsx-runtime'],
+  external: ['react', 'react-dom', 'react/jsx-runtime', /^@mui\//, /^@emotion\//],
   onwarn(warning, warn) {
     if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
     warn(warning);

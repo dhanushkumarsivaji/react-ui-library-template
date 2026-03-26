@@ -1,3 +1,4 @@
+import { expect, fn } from 'storybook/test';
 import SaveIcon from '@mui/icons-material/Save';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Button from './Button';
@@ -6,6 +7,10 @@ export default {
   title: 'Atoms/Button',
   component: Button,
   tags: ['autodocs'],
+  args: {
+    // Spy on onClick across all stories
+    onClick: fn(),
+  },
   argTypes: {
     variant: {
       control: 'select',
@@ -19,7 +24,6 @@ export default {
       control: 'select',
       options: ['small', 'medium', 'large'],
     },
-    onClick: { action: 'clicked' },
   },
 };
 
@@ -28,6 +32,11 @@ export const Primary = {
     children: 'Primary Button',
     variant: 'contained',
     color: 'primary',
+  },
+  play: async ({ canvas, args, userEvent }) => {
+    const button = canvas.getByRole('button', { name: /primary button/i });
+    await userEvent.click(button);
+    await expect(args.onClick).toHaveBeenCalledOnce();
   },
 };
 
@@ -44,6 +53,11 @@ export const Outlined = {
     children: 'Outlined Button',
     variant: 'outlined',
   },
+  play: async ({ canvas, args, userEvent }) => {
+    const button = canvas.getByRole('button', { name: /outlined button/i });
+    await userEvent.click(button);
+    await expect(args.onClick).toHaveBeenCalledOnce();
+  },
 };
 
 export const Text = {
@@ -58,6 +72,13 @@ export const Loading = {
     children: 'Saving...',
     loading: true,
   },
+  play: async ({ canvas, args, userEvent }) => {
+    const button = canvas.getByRole('button', { name: /saving/i });
+    await expect(button).toBeDisabled();
+    await expect(button).toHaveAttribute('aria-busy', 'true');
+    await userEvent.click(button);
+    await expect(args.onClick).not.toHaveBeenCalled();
+  },
 };
 
 export const WithIcons = {
@@ -71,6 +92,12 @@ export const Disabled = {
   args: {
     children: 'Disabled',
     disabled: true,
+  },
+  play: async ({ canvas, args, userEvent }) => {
+    const button = canvas.getByRole('button', { name: /disabled/i });
+    await expect(button).toBeDisabled();
+    await userEvent.click(button);
+    await expect(args.onClick).not.toHaveBeenCalled();
   },
 };
 
@@ -100,5 +127,10 @@ export const Danger = {
     children: 'Delete',
     color: 'error',
     startIcon: <DeleteIcon />,
+  },
+  play: async ({ canvas, args, userEvent }) => {
+    const button = canvas.getByRole('button', { name: /delete/i });
+    await userEvent.click(button);
+    await expect(args.onClick).toHaveBeenCalledOnce();
   },
 };

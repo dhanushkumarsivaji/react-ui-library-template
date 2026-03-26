@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect } from 'storybook/test';
 import Typography from '@mui/material/Typography';
 import MuiButton from '@mui/material/Button';
 import Card from './Card';
@@ -34,6 +35,10 @@ export const Basic: Story = {
       </Typography>
     ),
   },
+  play: async ({ canvas }) => {
+    await expect(canvas.getByText('Card Title')).toBeInTheDocument();
+    await expect(canvas.getByText('Card subtitle text')).toBeInTheDocument();
+  },
 };
 
 export const WithActions: Story = {
@@ -49,6 +54,14 @@ export const WithActions: Story = {
       </>
     ),
   },
+  play: async ({ canvas, userEvent }) => {
+    await expect(canvas.getByRole('button', { name: /learn more/i })).toBeInTheDocument();
+    const shareButton = canvas.getByRole('button', { name: /share/i });
+    await expect(shareButton).toBeInTheDocument();
+    await userEvent.click(shareButton);
+    // Card remains visible after button click
+    await expect(canvas.getByText('Interactive Card')).toBeInTheDocument();
+  },
 };
 
 export const WithMedia: Story = {
@@ -63,6 +76,11 @@ export const WithMedia: Story = {
       </Typography>
     ),
     actions: <MuiButton size="small">View Details</MuiButton>,
+  },
+  play: async ({ canvas }) => {
+    const image = canvas.getByRole('img', { name: /placeholder image/i });
+    await expect(image).toBeInTheDocument();
+    await expect(image).toHaveAttribute('src', 'https://picsum.photos/seed/card/400/200');
   },
 };
 

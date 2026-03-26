@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, fn } from 'storybook/test';
 import MuiButton from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal, { type ModalProps } from './Modal';
@@ -8,6 +9,9 @@ const meta: Meta<typeof Modal> = {
   title: 'Organisms/Modal',
   component: Modal,
   tags: ['autodocs'],
+  args: {
+    onClose: fn(),
+  },
   argTypes: {
     maxWidth: { control: 'select', options: ['xs', 'sm', 'md', 'lg', 'xl', false] },
   },
@@ -39,6 +43,20 @@ export const Basic: Story = {
       </Typography>
     ),
   },
+  play: async ({ canvas, userEvent }) => {
+    // Modal is initially closed
+    await expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
+
+    // Open the modal
+    await userEvent.click(canvas.getByRole('button', { name: /open modal/i }));
+    const dialog = canvas.getByRole('dialog');
+    await expect(dialog).toBeInTheDocument();
+    await expect(canvas.getByText('Basic Modal')).toBeVisible();
+
+    // Close via the X button
+    await userEvent.click(canvas.getByRole('button', { name: /close dialog/i }));
+    await expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
+  },
 };
 
 export const WithActions: Story = {
@@ -54,6 +72,14 @@ export const WithActions: Story = {
         </MuiButton>
       </>
     ),
+  },
+  play: async ({ canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole('button', { name: /open modal/i }));
+    await expect(canvas.getByRole('dialog')).toBeInTheDocument();
+
+    // Both action buttons are visible
+    await expect(canvas.getByRole('button', { name: /cancel/i })).toBeVisible();
+    await expect(canvas.getByRole('button', { name: /confirm/i })).toBeVisible();
   },
 };
 
@@ -84,6 +110,19 @@ export const NonDismissible: Story = {
     disableEscapeClose: true,
     children: <Typography>This modal can only be closed via the X button or actions.</Typography>,
     actions: <MuiButton variant="contained">Acknowledge</MuiButton>,
+  },
+  play: async ({ canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole('button', { name: /open modal/i }));
+    const dialog = canvas.getByRole('dialog');
+    await expect(dialog).toBeInTheDocument();
+
+    // Escape key should NOT close the modal
+    await userEvent.keyboard('{Escape}');
+    await expect(dialog).toBeInTheDocument();
+
+    // Close button DOES work
+    await userEvent.click(canvas.getByRole('button', { name: /close dialog/i }));
+    await expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
   },
 };
 

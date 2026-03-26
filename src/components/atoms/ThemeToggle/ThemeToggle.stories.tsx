@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect } from 'storybook/test';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { ThemeProvider } from '../../../styles';
@@ -29,3 +30,21 @@ export default meta;
 type Story = StoryObj<typeof ThemeToggle>;
 
 export const Default: Story = {};
+
+export const ToggleInteraction: Story = {
+  name: 'Toggle — light → dark → light',
+  play: async ({ canvas, userEvent }) => {
+    // Starts in light mode
+    const toggle = canvas.getByRole('button', { name: /switch to dark mode/i });
+    await expect(toggle).toBeInTheDocument();
+
+    // Click once — switches to dark
+    await userEvent.click(toggle);
+    const darkToggle = canvas.getByRole('button', { name: /switch to light mode/i });
+    await expect(darkToggle).toBeInTheDocument();
+
+    // Click again — back to light
+    await userEvent.click(darkToggle);
+    await expect(canvas.getByRole('button', { name: /switch to dark mode/i })).toBeInTheDocument();
+  },
+};

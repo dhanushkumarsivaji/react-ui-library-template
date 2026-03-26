@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Input matches snapshot 1`] = `
+<div
+  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="false"
+    for="_r_6_"
+    id="_r_6_-label"
+  >
+    Snapshot
+  </label>
+  <div
+    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+  >
+    <input
+      aria-describedby="_r_6_-helper-text"
+      aria-invalid="false"
+      class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
+      id="_r_6_"
+      type="text"
+    />
+    <fieldset
+      aria-hidden="true"
+      class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+    >
+      <legend
+        class="css-1n64csd-MuiNotchedOutlined-root"
+      >
+        <span>
+          Snapshot
+        </span>
+      </legend>
+    </fieldset>
+  </div>
+  <p
+    class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-er619e-MuiFormHelperText-root"
+    id="_r_6_-helper-text"
+  >
+    Help
+  </p>
+</div>
+`;

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Card matches snapshot — basic card 1`] = `
+<div
+  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1j74uew-MuiPaper-root-MuiCard-root"
+  role="article"
+  style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+>
+  <div
+    class="MuiCardHeader-root css-149tc0y-MuiCardHeader-root"
+  >
+    <div
+      class="MuiCardHeader-content css-16o2p3x-MuiCardHeader-content"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-16xl4zq-MuiTypography-root"
+      >
+        Title
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-body1 MuiCardHeader-subheader css-1ro85z9-MuiTypography-root"
+      >
+        Subtitle
+      </span>
+    </div>
+  </div>
+  <div
+    class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+  >
+    Body
+  </div>
+</div>
+`;
+
+exports[`Card matches snapshot — full card with all props 1`] = `
+<div
+  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation4 MuiCard-root css-1j74uew-MuiPaper-root-MuiCard-root"
+  role="article"
+  style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
+>
+  <div
+    class="MuiCardHeader-root css-149tc0y-MuiCardHeader-root"
+  >
+    <div
+      class="MuiCardHeader-content css-16o2p3x-MuiCardHeader-content"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-16xl4zq-MuiTypography-root"
+      >
+        Full Card
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-body1 MuiCardHeader-subheader css-1ro85z9-MuiTypography-root"
+      >
+        All props
+      </span>
+    </div>
+  </div>
+  <img
+    alt="Image"
+    class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1kuwa16-MuiCardMedia-root"
+    height="200"
+    src="https://example.com/img.jpg"
+  />
+  <div
+    class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+  >
+    Full content
+  </div>
+  <div
+    class="MuiCardActions-root MuiCardActions-spacing css-1q4nm6f-MuiCardActions-root"
+  >
+    <button
+      type="button"
+    >
+      Go
+    </button>
+  </div>
+</div>
+`;

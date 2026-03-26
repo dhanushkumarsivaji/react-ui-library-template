@@ -1,0 +1,44 @@
+name: Feature Request
+description: Suggest a new component or feature
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the feature
+      description: A clear description of what you'd like to see.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Why is this feature needed? What problem does it solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed API
+      description: How would the component/feature be used?
+      placeholder: |
+        ```tsx
+        import { NewComponent } from 'react-ui-library-template';
+
+        <NewComponent variant="primary" />
+        ```
+
+  - type: dropdown
+    id: component-type
+    attributes:
+      label: Component type
+      options:
+        - Atom (primitive)
+        - Molecule (composite)
+        - Organism (complex assembly)
+        - Hook
+        - Utility
+        - Other

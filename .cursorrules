@@ -1,0 +1,25 @@
+You are working in a React UI component library template.
+
+Tech stack: React 19, TypeScript 5.9, MUI 7, Storybook 10, Jest 30, ESLint 10 flat config, Rollup 4.
+
+Component pattern:
+- Atoms (src/components/atoms/) — primitive building blocks (Button, Input)
+- Molecules (src/components/molecules/) — composite components (Card, Alert)
+- Organisms (src/components/organisms/) — complex assemblies (Modal)
+
+Every component MUST have:
+1. ComponentName.tsx — implementation with exported TypeScript interface
+2. ComponentName.stories.tsx — Storybook stories with tags: ['autodocs']
+3. __tests__/ComponentName.test.tsx — unit + snapshot + jest-axe accessibility tests
+4. index.ts — barrel export
+
+All public APIs must be exported from src/index.ts.
+
+Testing: Always include jest-axe accessibility tests:
+  const { container } = render(<Component />);
+  expect(await axe(container)).toHaveNoViolations();
+
+Style: Use MUI components as base, Emotion for custom styles, forwardRef for native wrappers.
+Commits: Conventional commits (feat:, fix:, docs:, test:, refactor:, chore:).
+
+Don't: use any, skip a11y tests, use @ts-ignore, use console.log, use inline styles.

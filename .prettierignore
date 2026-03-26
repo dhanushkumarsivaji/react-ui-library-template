@@ -1,0 +1,8 @@
+dist
+node_modules
+coverage
+storybook-static
+*.min.js
+CHANGELOG.md
+stats.html
+.changeset

@@ -4,7 +4,7 @@
 
 ### The most comprehensive, production-ready template for building React component libraries and design systems.
 
-[![CI](https://github.com/YOUR_USERNAME/react-ui-library-template/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/react-ui-library-template/actions/workflows/ci.yml)
+[![CI](https://github.com/dhanushkumarsivaji/react-ui-library-template/actions/workflows/ci.yml/badge.svg)](https://github.com/dhanushkumarsivaji/react-ui-library-template/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/react-ui-library-template.svg)](https://www.npmjs.com/package/react-ui-library-template)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6.svg)](https://www.typescriptlang.org/)
@@ -14,12 +14,12 @@
 [![ESLint](https://img.shields.io/badge/ESLint-10_flat_config-4B32C3.svg)](https://eslint.org/)
 [![a11y](https://img.shields.io/badge/a11y-jest--axe_+_WCAG_2.1-green.svg)](#testing-strategy)
 [![Changesets](https://img.shields.io/badge/Releases-Changesets-blue.svg)](https://github.com/changesets/changesets)
-[![codecov](https://codecov.io/gh/YOUR_USERNAME/react-ui-library-template/branch/main/graph/badge.svg)](https://codecov.io/gh/YOUR_USERNAME/react-ui-library-template)
+[![codecov](https://codecov.io/gh/dhanushkumarsivaji/react-ui-library-template/branch/main/graph/badge.svg)](https://codecov.io/gh/dhanushkumarsivaji/react-ui-library-template)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 **83 tests** | **6 components** | **3 hooks** | **Design tokens + dark mode** | **AI governance** | **npm provenance**
 
-[Live Storybook Demo](https://YOUR_USERNAME.github.io/react-ui-library-template/) | [npm Package](https://www.npmjs.com/package/react-ui-library-template) | [Contributing](CONTRIBUTING.md)
+[Live Storybook Demo](https://dhanushkumarsivaji.github.io/react-ui-library-template/) | [npm Package](https://www.npmjs.com/package/react-ui-library-template) | [Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -91,7 +91,7 @@ Click **"Use this template"** on GitHub to create your own repo instantly.
 ### Option 2: Clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/react-ui-library-template.git my-ui-library
+git clone https://github.com/dhanushkumarsivaji/react-ui-library-template.git my-ui-library
 cd my-ui-library
 rm -rf .git && git init    # Fresh git history
 
@@ -398,7 +398,7 @@ npm audit signatures
 After cloning, update these files:
 
 - [ ] `package.json` — name, description, author, repository URL, homepage
-- [ ] `README.md` — badges (replace `YOUR_USERNAME`), project description
+- [ ] `README.md` — badges (replace `dhanushkumarsivaji`), project description
 - [ ] `LICENSE` — copyright holder
 - [ ] `.changeset/config.json` — GitHub repo for changelog links
 - [ ] `SECURITY.md` — security contact email

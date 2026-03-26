@@ -6,7 +6,7 @@ Thank you for your interest in contributing! This guide will help you get starte
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/react-ui-library-template.git
+git clone https://github.com/dhanushkumarsivaji/react-ui-library-template.git
 cd react-ui-library-template
 
 # Install dependencies

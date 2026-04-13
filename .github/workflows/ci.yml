@@ -65,7 +65,7 @@ jobs:
           du -sh dist/cjs/ dist/esm/ dist/types/ 2>/dev/null || true
           du -sh dist/cjs/ dist/esm/ dist/types/ 2>/dev/null >> $GITHUB_STEP_SUMMARY || true
           echo '```' >> $GITHUB_STEP_SUMMARY
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: dist
           path: dist/
@@ -82,7 +82,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build-storybook
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: storybook
           path: storybook-static/
